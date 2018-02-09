@@ -1,0 +1,8 @@
+<h2>Best Quotes Ever !!!</h2>
+<ul class="quotes">
+    <li *ngFor="let quote of quotes">
+        <a routerLink="/detail/{{quote.id}}">
+            <span class="badge">{{quote.id}}</span> {{quote.text}} - {{quote.author}}
+        </a>
+    </li>
+</ul>

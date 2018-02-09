@@ -1,0 +1,10 @@
+<div *ngIf="quote">
+    <h2>{{ quote.text }}</h2>
+    <div><span>id: </span>{{quote.id}}</div>
+    <div>
+        <label>author:
+            <input [(ngModel)]="quote.author" placeholder="author">
+        </label>
+    </div>
+</div>
+<button (click)="goBack()">go back</button>
