@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 
-import { Quote } from './quote';
-import { QUOTES } from './mock-quotes';
+import { Quote } from '../beans/quote';
+import { QUOTES } from '../beans/mock-quotes';
 import { MessageService } from './message.service';
 
 @Injectable()
