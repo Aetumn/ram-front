@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Quote } from '../quote';
-import { QuoteService } from '../quote.service';
+import { Quote } from '../beans/quote';
+import { QuoteService } from '../services/quote.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,9 +10,9 @@ import { QuoteService } from '../quote.service';
 })
 export class DashboardComponent implements OnInit {
 
-  quotes:Quote[] = [];
+  quotes: Quote[] = [];
 
-  constructor(private quoteService:QuoteService) { }
+  constructor(private quoteService: QuoteService ) { }
 
   getQuotes(): void {
     this.quoteService.getQuotes()

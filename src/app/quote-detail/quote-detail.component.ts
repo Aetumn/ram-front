@@ -1,9 +1,9 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
+import {Component, OnInit, Input} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {Location} from '@angular/common';
 
-import { QuoteService }  from '../quote.service';
-import { Quote } from '../quote';
+import {QuoteService} from '../services/quote.service';
+import {Quote} from '../beans/quote';
 
 @Component({
   selector: 'app-quote-detail',
@@ -12,13 +12,12 @@ import { Quote } from '../quote';
 })
 export class QuoteDetailComponent implements OnInit {
 
-  @Input() quote: Quote; 
+  @Input() quote: Quote;
 
-  constructor(
-    private route: ActivatedRoute,
-    private quoteService: QuoteService,
-    private location: Location
-  ) { }
+  constructor(private route: ActivatedRoute,
+              private quoteService: QuoteService,
+              private location: Location) {
+  }
 
   ngOnInit() {
     this.getQuote();
