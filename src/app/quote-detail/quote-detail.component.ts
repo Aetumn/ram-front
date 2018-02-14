@@ -8,7 +8,7 @@ import {Quote} from '../beans/quote';
 @Component({
   selector: 'app-quote-detail',
   templateUrl: './quote-detail.component.html',
-  styleUrls: ['./quote-detail.component.css']
+  styleUrls: ['./quote-detail.component.scss']
 })
 export class QuoteDetailComponent implements OnInit {
 
