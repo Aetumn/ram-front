@@ -1,14 +1,17 @@
-import {Injectable} from '@angular/core';
+import {Injectable, OnInit} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import {of} from 'rxjs/observable/of';
 
 import {Quote} from '../beans/quote';
 import {QUOTES} from '../beans/mock-quotes';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable()
-export class QuoteService {
+export class QuoteService implements OnInit {
 
-  constructor() {
+  private quotesUrl = 'http://localhost:8080/quote';
+
+  constructor(private http: HttpClient) {
   }
 
   ngOnInit() {
@@ -16,12 +19,11 @@ export class QuoteService {
   }
 
   getQuote(id: number): Observable<Quote> {
-    // Todo: send the message _after_ fetching the hero
     return of(QUOTES.find(quote => quote.id === id));
   }
 
   getQuotes(): Observable<Quote[]> {
-    return of(QUOTES);
+    return this.http.get<Quote[]>(this.quotesUrl);
   }
 
 }
