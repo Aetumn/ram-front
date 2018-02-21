@@ -5,24 +5,23 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { QuotesComponent } from './quotes/list/quotes.component';
 import { QuoteDetailComponent } from './quotes/quote-detail/quote-detail.component';
-import { QuoteService } from './services/quote.service';
 import { AppRoutingModule } from './routing/app-routing.module';
 import {CommonUIModule} from './common/common-ui.module';
+import {QuotesModule} from './quotes/quotes.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    QuotesComponent,
-    QuoteDetailComponent
+    AppComponent
+
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     AppRoutingModule,
-    CommonUIModule
+    CommonUIModule,
+    QuotesModule
   ],
-  providers: [QuoteService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -2,8 +2,8 @@ import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import {of} from 'rxjs/observable/of';
 
-import {Quote} from '../quotes/beans/quote';
-import {QUOTES} from '../quotes/beans/mock-quotes';
+import {Quote} from '../beans/quote';
+import {QUOTES} from '../beans/mock-quotes';
 
 @Injectable()
 export class QuoteService {

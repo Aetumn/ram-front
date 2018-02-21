@@ -5,12 +5,14 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FooterComponent} from './footer/footer.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {AppRoutingModule} from '../routing/app-routing.module';
+import {QuotesModule} from '../quotes/quotes.module';
 
 @NgModule({
   imports: [
     CommonModule,
     NgbModule,
-    AppRoutingModule
+    AppRoutingModule,
+    QuotesModule
   ],
   exports: [
     HeaderComponent,

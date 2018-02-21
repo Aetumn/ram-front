@@ -1,10 +1,13 @@
 <div *ngIf="quote">
-    <h2>{{ quote.text }}</h2>
-    <div><span>id: </span>{{quote.id}}</div>
-    <div>
-        <label>author:
-            <input [(ngModel)]="quote.author" placeholder="author">
-        </label>
-    </div>
+  <h3>{{ quote.text }}</h3>
+
+  <div>
+    <label>author:
+      <input [(ngModel)]="quote.author" placeholder="author">
+    </label>
+  </div>
+  <div>
+    <span> Last edited on {{quote.creationDate | date }} by {{quote.lastModifUser}} </span>
+  </div>
 </div>
 <button (click)="goBack()">go back</button>

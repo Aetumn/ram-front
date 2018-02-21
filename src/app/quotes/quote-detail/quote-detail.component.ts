@@ -2,7 +2,7 @@ import {Component, OnInit, Input} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Location} from '@angular/common';
 
-import {QuoteService} from '../../services/quote.service';
+import {QuoteService} from '../services/quote.service';
 import {Quote} from '../beans/quote';
 
 @Component({
