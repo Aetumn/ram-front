@@ -1,25 +1,36 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {By} from '@angular/platform-browser';
+import {DebugElement} from '@angular/core';
 
-import { QuoteDetailComponent } from './quote-detail.component';
+import {QuoteDetailComponent} from './quote-detail.component';
 
 describe('QuoteDetailComponent', () => {
-  let component: QuoteDetailComponent;
-  let fixture: ComponentFixture<QuoteDetailComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ QuoteDetailComponent ]
-    })
-    .compileComponents();
-  }));
+  let comp: QuoteDetailComponent;
+  let fixture: ComponentFixture<QuoteDetailComponent>;
+  let de: DebugElement;
+  let el: HTMLElement;
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(QuoteDetailComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    TestBed.configureTestingModule({
+      declarations: [QuoteDetailComponent], // declare the test component
+    });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+    fixture = TestBed.createComponent(QuoteDetailComponent);
+
+    comp = fixture.componentInstance; // BannerComponent test instance
+
+    // query for the title <h1> by CSS element selector
+    de = fixture.debugElement.query(By.css('h2'));
+    el = de.nativeElement;
+
+    /* it('should display original title', () => {
+       fixture.detectChanges();
+       expect(el.textContent).toContain(comp.quote.text);
+     });*/
+
+
   });
 });
+
+

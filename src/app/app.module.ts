@@ -13,7 +13,6 @@ import { MessageService } from './services/message.service';
 import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {HeaderModule} from './header/header.module';
-import {HeaderComponent} from './header/header.component';
 
 
 @NgModule({
