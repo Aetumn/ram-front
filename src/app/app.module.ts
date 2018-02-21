@@ -1,35 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-
 
 import { AppComponent } from './app.component';
-import { QuotesComponent } from './quotes/quotes.component';
-import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
+import { QuotesComponent } from './quotes/list/quotes.component';
+import { QuoteDetailComponent } from './quotes/quote-detail/quote-detail.component';
 import { QuoteService } from './services/quote.service';
-import { MessagesComponent } from './messages/messages.component';
-import { MessageService } from './services/message.service';
-import { AppRoutingModule } from './/app-routing.module';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import {HeaderModule} from './header/header.module';
+import { AppRoutingModule } from './routing/app-routing.module';
+import {CommonUIModule} from './common/common-ui.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     QuotesComponent,
-    QuoteDetailComponent,
-    MessagesComponent,
-    DashboardComponent
+    QuoteDetailComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HeaderModule
+    CommonUIModule
   ],
-  providers: [QuoteService, MessageService],
+  providers: [QuoteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
